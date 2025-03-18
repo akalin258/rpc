@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -42,5 +43,6 @@ public class WorkerThread implements Runnable {
             logger.error("调用或发送时有错误发生：", e);
         }
     }
+
 
 }
