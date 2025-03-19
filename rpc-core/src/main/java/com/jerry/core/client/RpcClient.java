@@ -1,3 +1,4 @@
+/*
 package com.jerry.core.client;
 
 import java.io.IOException;
@@ -6,6 +7,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 import com.jerry.common.entity.RpcRequest;
+import com.jerry.core.RpcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +16,8 @@ public class RpcClient {
     //日志
     private static final Logger logger = LoggerFactory.getLogger(RpcClient.class);
     //发送请求
-    /*public Object sendRequest(RpcRequest rpcRequest, String host, int port) {
+    */
+/*public Object sendRequest(RpcRequest rpcRequest, String host, int port) {
         try (Socket socket = new Socket(host, port)) {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
@@ -27,7 +30,8 @@ public class RpcClient {
             return null;
         }
 
-    }*/
+    }*//*
+
 
     //手写RpcClient的发送请求
     public Object sendRequest(RpcRequest rpcRequest,String host,int port){
@@ -48,3 +52,4 @@ public class RpcClient {
     }
 }
 
+*/

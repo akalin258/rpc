@@ -1,4 +1,4 @@
-package com.jerry.core.server;
+package com.jerry.core;
 
 import com.jerry.common.entity.RpcRequest;
 import com.jerry.common.entity.RpcResponse;

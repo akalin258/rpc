@@ -1,4 +1,4 @@
-package com.jerry.core.register;
+package com.jerry.core.registry;
 
 import com.jerry.common.enumeration.RpcError;
 import com.jerry.common.exception.RpcException;
@@ -14,10 +14,10 @@ public class DefaultServiceRegistry implements ServiceRegistry{
     private static final Logger logger = LoggerFactory.getLogger(DefaultServiceRegistry.class);
     //保存服务,key为名字方便用户存取
     //接口名,实现了
-    private final Map<String, Object> serviceMap = new ConcurrentHashMap<>();
+    private static final Map<String, Object> serviceMap = new ConcurrentHashMap<>();
 
     //用来判断服务是否已注册
-    private final Set<String> registeredService = ConcurrentHashMap.newKeySet();
+    private static final Set<String> registeredService = ConcurrentHashMap.newKeySet();
     @Override
     public synchronized <T> void register(T service) {
         String serviceName = service.getClass().getCanonicalName();

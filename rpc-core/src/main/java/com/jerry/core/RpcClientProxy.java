@@ -1,7 +1,8 @@
-package com.jerry.core.client;
+package com.jerry.core;
 
 import com.jerry.common.entity.RpcRequest;
 import com.jerry.common.entity.RpcResponse;
+import com.jerry.core.netty.client.NettyClient;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -30,7 +31,7 @@ public class RpcClientProxy implements InvocationHandler {
                 .parameters(args) //参数别传错了
                 .paramTypes(method.getParameterTypes())
                 .build();
-        RpcClient rpcClient = new RpcClient();
-        return ((RpcResponse) rpcClient.sendRequest(rpcRequest, host, port)).getData();
+        RpcClient rpcClient = new NettyClient();
+        return rpcClient.sendRequest(rpcRequest);
     }
 }

@@ -1,4 +1,4 @@
-package com.jerry.core.register;
+package com.jerry.core.registry;
 
 public interface ServiceRegistry {
 
